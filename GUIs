@@ -1,0 +1,26 @@
+from tkinter import *
+import tkinter.messagebox
+
+
+class KilometerGUI():
+    def __init__(self):
+        self.main_window = tkinter.Tk()
+
+        self.top_frame = tkinter.Frame()
+        self.bottom_frame = tkinter.Frame()
+
+        self.prompt_label = tkinter.Label(self.top_frame, text='Enter distance in kilometers')
+        self.kilo_entry = tkinter.Entry(self.top_frame, width=10)
+        self.prompt_label.pack(side='left')
+        self.kilo_entry.pack(side='left')
+
+        self.calc_button = tkinter.Button()
+        self.quit_button = tkinter.Button()
+
+        self.top_frame.pack()
+        self.bottom_frame.pack()
+
+        tkinter.mainloop()
+
+    def convert(self):
+        
